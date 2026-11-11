@@ -6,4 +6,6 @@ public class Basic_Range : Enemy
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float damage;
+
+
 }
