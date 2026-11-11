@@ -9,6 +9,12 @@ public class Wave_Manager : MonoBehaviour
     private int currentWave;
     private int enemiesToSpawn;
 
+    [Header("Values")]
+    [Tooltip("Format minutes => duration (1:30) min")]
+    [SerializeField] private float duration;
+    private float timer;
+
+    [Header("Spawn")]
     [SerializeField] private GameObject[] enemiesPrefabs;
     [SerializeField] private Transform[] spawnPoints;
 
@@ -33,6 +39,11 @@ public class Wave_Manager : MonoBehaviour
     private IEnumerator HandleWave()
     {
         yield return null;
+    }
+
+    private IEnumerator SpawnBoss()
+    {
+        yield return null; 
     }
 
     private void EndOfWave()
