@@ -15,6 +15,19 @@ MonoBehaviour:
   _name: Test
   _weaponType: 0
   _description: This is a test description
+  prefab: {fileID: 976806598263367759, guid: 6121235f1a25abf468188a72d6cfbcb2, type: 3}
   damage: 9999
+  timeBtwShoot: 0.2
+  range: 30
+  isAutomatic: 1
+  spreadAngle: 0
   reloadTime: 1
   magSize: 9999
+  totalMag: 4
+  infiniteAmmo: 0
+  bulletTrailPrefab: {fileID: 0}
+  trailTravelTime: 0.08
+  trailDuration: 0.1
+  shootSfx: {fileID: 0}
+  reloadSfx: {fileID: 0}
+  emptySfx: {fileID: 0}

@@ -1,112 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3928154390955369487
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 393111063949636680}
-  - component: {fileID: 2381113306965133469}
-  m_Layer: 0
-  m_Name: CinemachineCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &393111063949636680
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3928154390955369487}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2396611718821399780}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2381113306965133469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3928154390955369487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
-  Priority:
-    Enabled: 0
-    m_Value: 0
-  OutputChannel: 1
-  StandbyUpdate: 2
-  m_StreamingVersion: 20241001
-  m_LegacyPriority: 0
-  Target:
-    TrackingTarget: {fileID: 0}
-    LookAtTarget: {fileID: 0}
-    CustomLookAtTarget: 0
-  Lens:
-    FieldOfView: 60.000004
-    OrthographicSize: 5
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
-    Dutch: 0
-    ModeOverride: 0
-    PhysicalProperties:
-      GateFit: 2
-      SensorSize: {x: 21.946, y: 16.002}
-      LensShift: {x: 0, y: 0}
-      FocusDistance: 10
-      Iso: 200
-      ShutterSpeed: 0.005
-      Aperture: 16
-      BladeCount: 5
-      Curvature: {x: 2, y: 11}
-      BarrelClipping: 0.25
-      Anamorphism: 0
-  BlendHint: 0
---- !u!1 &5727936561083470374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2396611718821399780}
-  m_Layer: 0
-  m_Name: Camera_Holder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2396611718821399780
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5727936561083470374}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.35, z: 0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 393111063949636680}
-  m_Father: {fileID: 3253718581622035624}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8223116732806786378
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +48,8 @@ GameObject:
   - component: {fileID: 2092329096740130598}
   - component: {fileID: 5213414089911435095}
   - component: {fileID: 7413421735940334031}
+  - component: {fileID: 6011421353022675092}
+  - component: {fileID: 4719283746501928374}
   m_Layer: 14
   m_Name: Player
   m_TagString: Player
@@ -176,7 +71,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6130409147568109975}
-  - {fileID: 2396611718821399780}
+  - {fileID: 3541449903054061271}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6247413646232989830
@@ -303,15 +198,51 @@ MonoBehaviour:
     m_ActionId: 39f5eb6e-27ab-49d5-8d19-efdd9860e216
     m_ActionName: 'Player/Dash[/Keyboard/leftShift]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2092329096740130598}
+        m_TargetAssemblyTypeName: Player_InputsReciver, Assembly-CSharp
+        m_MethodName: OnShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 60f3df8a-161f-4809-9f34-17556242c374
     m_ActionName: 'Player/Shoot[/Mouse/leftButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2092329096740130598}
+        m_TargetAssemblyTypeName: Player_InputsReciver, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 53559030-e809-44b6-b717-5678d01ce5ea
     m_ActionName: 'Player/Interaction[/Keyboard/e]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2092329096740130598}
+        m_TargetAssemblyTypeName: Player_InputsReciver, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: cc58ceee-be70-45a1-9cf8-6c8c18715b58
     m_ActionName: 'Player/Pause[/Keyboard/escape]'
   - m_PersistentCalls:
@@ -329,7 +260,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 3d0bb1e1-1732-4d99-8ec6-a08b5121ff21
-    m_ActionName: 'Player/LookAt[/Mouse/delta]'
+    m_ActionName: 'Player/LookAt[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2092329096740130598}
+        m_TargetAssemblyTypeName: Player_InputsReciver, Assembly-CSharp
+        m_MethodName: OnReload
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b7e3c1a2-4f5d-4e8a-9c21-6d3f8a1e5b47
+    m_ActionName: 'Player/Reload[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -359,17 +306,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cd5a9fe90dc0b419fa7b8944c3dd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Controller
-  moveSpeed: 10
-  groundCheck: {fileID: 5473900702574749120}
-  whatIsGround:
+  moveSpeed: 7
+  acceleration: 60
+  rotationSpeed: 1080
+  dashSpeed: 22
+  dashDuration: 0.15
+  dashCD: 1
+  dashExtraInvulnerability: 0.05
+  dashThroughEnemies: 1
+  enemyLayer:
     serializedVersion: 2
-    m_Bits: 256
-  jumpForce: 10
-  dashForce: 10
-  dashCD: 2.25
-  camHolder: {fileID: 5727936561083470374}
-  mouseSensitivity: 0.1
-  maxClamp: 80
+    m_Bits: 32768
+  cinemachineCamera: {fileID: 0}
 --- !u!114 &7413421735940334031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,17 +330,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ef99660dbc70d498099997576a586a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Weapons
-  camHolder: {fileID: 5727936561083470374}
-  targetLayer:
+  weaponSocket: {fileID: 3541449903054061271}
+  startingWeapon: {fileID: 0}
+  groundMask:
     serializedVersion: 2
-    m_Bits: 32768
-  shotRange: 70
-  damage: 20
-  timeBtwShoot: 0.2
-  firePoint: {fileID: 0}
-  bulletTrailPrefab: {fileID: 0}
-  trailDuration: 0.1
-  trailTravelTime: 0.08
+    m_Bits: 256
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 33536
+--- !u!114 &6011421353022675092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300340592713444255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de153f2c95f453418fdfbf363108f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Health
+  maxHealth: 100
+--- !u!114 &4719283746501928374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300340592713444255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ac5676a32d4fd7b7d02ec06a109fdf, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Interaction
+  interactRadius: 2
+  interactMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &9014603663335000042
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +397,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6130409147568109975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9167970396428742819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3541449903054061271}
+  m_Layer: 14
+  m_Name: Weapon_Slot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3541449903054061271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167970396428742819}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3253718581622035624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &9127293328634597189
 PrefabInstance:

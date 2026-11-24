@@ -252,18 +252,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b60314e5204a547bace472900fe91f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basic_Range
-  maxHealth: 0
-  moveSpeed: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
+  maxHealth: 40
+  moveSpeed: 3
+  acceleration: 25
+  rotationSpeed: 540
   whatIsObstacle:
     serializedVersion: 2
     m_Bits: 512
-  groundCheck: {fileID: 5350259250467281569}
+  obstacleCheckDistance: 1.5
+  repathInterval: 0.3
+  cornerReachDistance: 0.5
+  navSampleDistance: 2
+  directMaxHeightDiff: 0.5
+  damage: 10
+  attackRange: 10
+  timeBtwAttack: 1.5
+  lineOfSightMask:
+    serializedVersion: 2
+    m_Bits: 512
+  deadBodyLayer: DeadBody
+  deadBodyIgnore:
+    serializedVersion: 2
+    m_Bits: 180224
+  launchForce: 8
+  launchUpForce: 3
+  launchTorque: 10
+  bodyLifetime: 10
   firepoint: {fileID: 5567645238401867592}
-  bulletPrefab: {fileID: 0}
-  damage: 0
+  bulletPrefab: {fileID: 6429598897440234588, guid: f6823a0c2c85af843953a0099e0242d3, type: 3}
+  projectileSpeed: 12
+  aimTime: 0.3
+  inaccuracy: 3
+  retreatDistance: 4
 --- !u!1 &8734763649604404194
 GameObject:
   m_ObjectHideFlags: 0
