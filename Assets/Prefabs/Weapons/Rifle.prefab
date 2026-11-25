@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7774713381939293976}
-  - component: {fileID: 1118454402918773109}
   - component: {fileID: 5111855434343521734}
+  - component: {fileID: 1118454402918773109}
   m_Layer: 0
   m_Name: Rifle
   m_TagString: Untagged
@@ -35,22 +35,6 @@ Transform:
   - {fileID: 4309208915478176462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1118454402918773109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976806598263367759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85c96261eea9a99438a03f3f514520dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicPistol
-  data: {fileID: 11400000, guid: e589cc9198fbb1947ac68e848cc2be86, type: 2}
-  firePoint: {fileID: 4309208915478176462}
-  dropHeight: 0.3
-  idleSpinSpeed: 90
 --- !u!136 &5111855434343521734
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -74,6 +58,22 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1118454402918773109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976806598263367759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c96261eea9a99438a03f3f514520dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasicPistol
+  data: {fileID: 11400000, guid: e589cc9198fbb1947ac68e848cc2be86, type: 2}
+  firePoint: {fileID: 4309208915478176462}
+  dropHeight: 0.3
+  idleSpinSpeed: 90
 --- !u!1 &1413938695841144658
 GameObject:
   m_ObjectHideFlags: 0

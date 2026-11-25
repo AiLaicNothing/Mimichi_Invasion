@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5624be9faf5ff84458f5dac23e39f6e1, type: 3}
+  m_Name: Rifle
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon_Data
+  _name: Rifle
+  _weaponType: 1
+  _description: A basic rifle with a good fire rate.
+  prefab: {fileID: 976806598263367759, guid: 6121235f1a25abf468188a72d6cfbcb2, type: 3}
+  icon: {fileID: 0}
+  damage: 20
+  timeBtwShoot: 0.25
+  range: 20
+  isAutomatic: 1
+  spreadAngle: 0.125
+  reloadTime: 1.25
+  magSize: 25
+  totalMag: 4
+  infiniteAmmo: 0
+  bulletTrailPrefab: {fileID: 0}
+  trailTravelTime: 0.08
+  trailDuration: 0.1
+  shootSfx: {fileID: 0}
+  reloadSfx: {fileID: 0}
+  emptySfx: {fileID: 0}

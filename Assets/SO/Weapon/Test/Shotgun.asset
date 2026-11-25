@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5624be9faf5ff84458f5dac23e39f6e1, type: 3}
-  m_Name: Test 1
+  m_Name: Shotgun
   m_EditorClassIdentifier: Assembly-CSharp::Weapon_Data
   _name: Shotgun
   _weaponType: 2
-  _description: This is a test description
+  _description: A shotgun capable of obliterating at close range
   prefab: {fileID: 976651249722212807, guid: 69d917fd6c482d54d9ca7f97ced13772, type: 3}
-  damage: 9999
+  icon: {fileID: 0}
+  damage: 8
   timeBtwShoot: 0.2
-  range: 30
+  range: 10
   isAutomatic: 0
-  spreadAngle: 0.1
-  reloadTime: 1
-  magSize: 9999
+  spreadAngle: 0.25
+  reloadTime: 1.35
+  magSize: 5
   totalMag: 4
   infiniteAmmo: 0
   bulletTrailPrefab: {fileID: 0}

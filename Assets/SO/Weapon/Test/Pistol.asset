@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5624be9faf5ff84458f5dac23e39f6e1, type: 3}
-  m_Name: Test
+  m_Name: Pistol
   m_EditorClassIdentifier: Assembly-CSharp::Weapon_Data
-  _name: Test
+  _name: Basic pistol
   _weaponType: 0
-  _description: This is a test description
-  prefab: {fileID: 976806598263367759, guid: 6121235f1a25abf468188a72d6cfbcb2, type: 3}
-  damage: 9999
-  timeBtwShoot: 0.2
-  range: 30
-  isAutomatic: 1
-  spreadAngle: 0
-  reloadTime: 1
-  magSize: 9999
+  _description: A pistol
+  prefab: {fileID: 976651249722212807, guid: 69d917fd6c482d54d9ca7f97ced13772, type: 3}
+  icon: {fileID: 0}
+  damage: 15
+  timeBtwShoot: 0.4
+  range: 12
+  isAutomatic: 0
+  spreadAngle: 0.05
+  reloadTime: 1.75
+  magSize: 10
   totalMag: 4
-  infiniteAmmo: 0
+  infiniteAmmo: 1
   bulletTrailPrefab: {fileID: 0}
   trailTravelTime: 0.08
   trailDuration: 0.1
